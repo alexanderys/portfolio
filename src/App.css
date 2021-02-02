@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+/* font-family: 'Source Code Pro', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+/* 
+font-family: 'Source Code Pro', monospace;
+font-family: 'Ubuntu', sans-serif; 
+*/
+
+/* Genereal styles */
+
+html, body {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  /* color: black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a:active {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+
+.header {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-background {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.header-background > div::after {
+  content: "";
+  background:  url('./images/header2.png');
+  opacity: 0.2;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* margin-top: 100px; */
+}
+
+.header-background > div {
+  margin: 0;
+  margin-top: -200px;
+  margin-left: 15%;
+  padding: 30px 50px 70px;
+  border-left: 4px solid black;
+  width: 550px;
+}
+
+.header h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 25px;
+}
+
+.header p {
+  margin: 0;
+  margin-left: 25px;
+  font-size: 30px;
+}
+
+.header span {
+  font-size: 30px;
+}
+
+/* Navbar */
+nav {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+nav ul {
+  margin-left: auto;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active {
+  font-size: 21px;
+}
+.active::before {
+  content: '<';
+}
+.active::after {
+  content: ' />';
+}
+
+nav li a {
+  color: black;
+}
+
+/* Home */
+
+.presentation {
+  color: white;
+  background-color: #222;
+  border-radius: 40px 40px 0 0;
+  padding-left: 100px;
+}
+
+/* .code-open {
+  padding-top: 100px;
+  margin-left: -50px;
+  font-size: 2em;
+  font-weight: 400;
+} */
+
+.doctype {
+  padding-top: 100px;
+}
+
+.head-tag {
+  margin-left: 50px;
+}
+
+.title-tag {
+  margin-left: 100px;
+  font-size: 2em;
+}
+
+.body-tag {
+  margin-left: 50px;
+}
+
+.p-tag {
+  margin-left: 100px;
+  font-size: 2em;
+}
+
+.p-text {
+  margin-left: 150px;
+  font-size: 2em;
+  width: 50%;
+}
+
+.p-text a {
+  color: white;
+  text-decoration: underline;
+}
+
+.p-text a:active {
+  color: black;
+}
+
+.html-end {
+  padding-bottom: 100px;
+}
+
+/* .code-close {
+  padding-bottom: 100px;
+  margin-left: -50px;
+  font-size: 2em;
+  font-weight: 400;
+} */
+
+
+/* About */
+
+.about {
+  padding: 100px 0 100px 100px;
+  color: white;
+  background-color: #222;
+  border-radius: 40px 40px 0 0;
+}
+
+.about span {
+  font-size: 2em;
+}
+
+.about p {
+  font-size: 1.8em;
+  margin: 15px 150px 15px 50px;
+}
+
+.about a {
+  color: white;
+  text-decoration: underline;
+}
+
+.about a:active {
+  color: black;
+}
+
+
+
+.skills {
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills h2 {
+  margin-top: 100px;
+  font-size: 32px;
+}
+
+.skills > div {
+  display: flex;
+}
+
+.html-skill, .css-skill, .js-skill, .react-skill {
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+  color: white;
+  background-color: black;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  
+  transition: all 2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.html-skill .after {
+  display: none;
+}
+
+.html-skill {
+  background-color: #f16528;
+}
+/* .html-skill:hover {
+  background-color: #222;
+} */
+
+/* .html-skill:hover > .before {
+  display: none;
+}
+.html-skill:hover > .after {
+  display: block;
+}
+.html-skill:hover > .after > p {
+  display: block;
+  margin: 0;
+}
+.html-skill:hover > .after > p:nth-of-type(3), .html-skill:hover > .after > p:nth-of-type(4), .html-skill:hover > .after > p:nth-of-type(5), .html-skill:hover > .after > p:nth-of-type(6) {
+  display: block;
+  margin-left: 40px; 
+} */
+
+.css-skill {
+  background-color: #2a65f1;
+}
+/* .css-skill:hover {
+  background-color: #222;
+} */
+
+.js-skill {
+  background-color: #f7df1d;
+}
+/* .js-skill:hover {
+  background-color: #222;
+} */
+
+.react-skill {
+  background-color: #00d8ff;
+}
+/* .react-skill:hover {
+  background-color: #222;
+} */
+
+.html-skill > p, .css-skill > p, .js-skill > p, .react-skill > p {
+font-size: 30px;
+color: white;
 }
