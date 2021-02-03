@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faSass, faBootstrap, faGitSquare } from '@fortawesome/free-brands-svg-icons';
+
 const codeOpen = '<>';
 const codeClose = '</>';
 
@@ -26,26 +30,42 @@ function About() {
             </div>
 
             <div className="skills">
-                <h2>Main skills</h2>
+                <h2>Skills</h2>
                 <div>
-                    <div className="html-skill">
-                        <p className="before">HTML</p>
-                        {/*                         <p className="after">
-                            <p className="doctype">{doctype}</p>
-                            <p className="html-tag">{htmlStart}</p>
-                            <p className="head-tag">{headStart}</p><br />
-                            <p className="head-tag">{headEnd}</p>
-                            <p className="body-tag">{bodyStart}</p><br />
-                            <p className="body-tag">{bodyEnd}</p>
-                            <p className="html-tag html-end">{htmlEnd}</p>
-                        </p> */}
+                    <div className="html">
+                        <FontAwesomeIcon icon={faHtml5} className="skill-icon" />
+                        <p>HTML</p>
                     </div>
-
-                    <div className="css-skill"><p>CSS</p></div>
+                    <div>
+                        <FontAwesomeIcon icon={faCss3Alt} className="skill-icon css" />
+                        <p>CSS</p>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faJs} className="skill-icon js" />
+                        <p>JavaScript</p>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faReact} className="skill-icon react" />
+                        <p>React</p>
+                    </div>
                 </div>
                 <div>
-                    <div className="js-skill"><p>JavaScript</p></div>
-                    <div className="react-skill"><p>React</p></div>
+                    <div>
+                        <FontAwesomeIcon icon={faSass} className="skill-icon sass" />
+                        <p>SASS</p>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faBootstrap} className="skill-icon bootstrap" />
+                        <p>Bootstrap</p>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faGitSquare} className="skill-icon git" />
+                        <p>Git</p>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faMobileAlt} className="skill-icon responsive" />
+                        <p>Responsive design</p>
+                    </div>
                 </div>
             </div>
         </>
