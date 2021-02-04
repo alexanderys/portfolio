@@ -240,7 +240,7 @@ nav li a {
 .skills h2 {
   margin-top: 100px;
   margin-bottom: 40px;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .skills > div {
@@ -248,9 +248,12 @@ nav li a {
 }
 
 .skills > div > div {
+  display: flex;
+}
+
+.skills > div > div > div {
   width: 310px;
   height: 310px;
-  /* border: 3px solid black; */
   border-radius: 10px;
   margin: 10px;
   display: flex;
@@ -261,7 +264,7 @@ nav li a {
   box-shadow: 0 0 20px 4px rgb(175, 175, 175);
 }
 
-.skills > div > div > p {
+.skills p {
   margin: 10px;
   padding: 0;
   font-weight: 600;
@@ -563,12 +566,62 @@ nav li a {
 }
 
 
-.colors {
-  background-color: #f16528;
+/* Work */
 
-  background-color: #2a65f1;
+.work {
+  margin: 0;
+  margin-top: 50px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  background-color: #f7df1d;
+.work h2 {
+  margin: 40px 0;
+  font-size: 40px;
+}
 
-  background-color: #00d8ff;
+.card-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 300px;
+  padding: 0;
+  margin: 10px;
+  box-shadow: 0 0 15px 5px #ccc;
+  border-radius: 10px;
+  text-align: center;
+
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 15px #ccc;
+}
+
+.img-card {
+  min-width: 300px;
+  max-width: 300px;
+  height: 500px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%;
+}
+
+.card p {
+  margin: 10px 0;
+  padding: 0;
+  font-weight: 600;
 }
