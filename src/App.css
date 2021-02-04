@@ -61,7 +61,7 @@ ul {
 
 .header-background > div {
   margin: 0;
-  margin-top: -200px;
+  margin-top: -150px;
   margin-left: 15%;
   padding: 30px 50px 70px;
   border-left: 4px solid black;
@@ -188,11 +188,26 @@ nav li a {
 /* About */
 
 .about {
-
-  padding: 100px 0 100px 100px;
+  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 150px;
   color: white;
   background-color: #222;
   border-radius: 40px 40px 0 0;
+}
+
+.portrait {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.portrait img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about-text {
+  padding-left: 100px;
 }
 
 .about span {
@@ -224,6 +239,7 @@ nav li a {
 
 .skills h2 {
   margin-top: 100px;
+  margin-bottom: 40px;
   font-size: 32px;
 }
 
@@ -234,20 +250,22 @@ nav li a {
 .skills > div > div {
   width: 310px;
   height: 310px;
-  border: 1px solid black;
+  /* border: 3px solid black; */
   border-radius: 10px;
-  margin: 5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 4px rgb(175, 175, 175);
 }
 
 .skills > div > div > p {
   margin: 10px;
   padding: 0;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .skill-icon {
@@ -256,20 +274,292 @@ nav li a {
   padding: 0;
 }
 
-.html {
+/* HTML */
+.html .skill-icon {
   color: #f16528;
 }
-.css {
+.html {
+  position: relative;
+  transition: background 2s;
+}
+.html:hover {
+  background: #222;
+}
+.html::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.html:hover::after {
+  content: "";
+  background:#222 url('./images/html.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.html .skill-icon, .html p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.html:hover .skill-icon, .html:hover p {
+  opacity: 0;
+}
+
+/* CSS */
+.css .skill-icon {
   color: #2a65f1;
 }
-.js {
+.css {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.css:hover {
+  background: #222;
+}
+.css::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.css:hover::after {
+  content: "";
+  background:#222 url('./images/css.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.css .skill-icon, .css p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.css:hover .skill-icon, .css:hover p {
+  opacity: 0;
+}
+
+/* JS */
+.js .skill-icon {
   color: #f7df1d;
 }
-.react {
+.js {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.js:hover {
+  background: #222;
+}
+.js::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.js:hover::after {
+  content: "";
+  background:#222 url('./images/js.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.js .skill-icon, .js p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.js:hover .skill-icon, .js:hover p {
+  opacity: 0;
+}
+
+/* React */
+.react .skill-icon {
   color: #00d8ff;
 }
-.sass {
+.react {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.react:hover {
+  background: #222;
+}
+.react::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.react:hover::after {
+  content: "";
+  background:#222 url('./images/react.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.react .skill-icon, .react p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.react:hover .skill-icon, .react:hover p {
+  opacity: 0;
+}
+
+/* SASS */
+.sass .skill-icon {
   color: #cd6799;
+}
+.sass {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.sass:hover {
+  background: #222;
+}
+.sass::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.sass:hover::after {
+  content: "";
+  background:#222 url('./images/sass.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.sass .skill-icon, .sass p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.sass:hover .skill-icon, .sass:hover p {
+  opacity: 0;
+}
+
+/* Bootstrap */
+.bootstrap .skill-icon {
+  color: #563e7c;
+}
+.bootstrap {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.bootstrap:hover {
+  background: #222;
+}
+.bootstrap::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.bootstrap:hover::after {
+  content: "";
+  background:#222 url('./images/bootstrap.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.bootstrap .skill-icon, .bootstrap p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.bootstrap:hover .skill-icon, .bootstrap:hover p {
+  opacity: 0;
+}
+
+/* Git */
+.git .skill-icon {
+  color: #f05134;
+}
+.git {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.git:hover {
+  background: #222;
+}
+.git::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.git:hover::after {
+  content: "";
+  background:#222 url('./images/git.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.git .skill-icon, .git p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.git:hover .skill-icon, .git:hover p {
+  opacity: 0;
+}
+
+/* Responsive */
+.responsive .skill-icon {
+
+}
+.responsive {
+  position: relative;
+  transition: background 2s, color 2s;
+}
+.responsive:hover {
+  background: #222;
+}
+.responsive::after{
+  content: "";
+  opacity: 0;
+  transition: opacity 2s;
+}
+.responsive:hover::after {
+  content: "";
+  background:#222 url('./images/responsive.png') 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.responsive .skill-icon, .responsive p {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.responsive:hover .skill-icon, .responsive:hover p {
+  opacity: 0;
 }
 
 
