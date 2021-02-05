@@ -1,0 +1,686 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+/* Utilities */
+/* Genereal styles */
+html, body {
+  font-family: "Source Code Pro", monospace;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  /* color: black; */
+}
+
+a:active {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-background {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.header-background > div::after {
+  content: "";
+  background: url("../images/header2.png");
+  opacity: 0.2;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* margin-top: 100px; */
+}
+
+.header-background > div {
+  margin: 0;
+  margin-top: -150px;
+  margin-left: 15%;
+  padding: 30px 50px 70px;
+  border-left: 4px solid black;
+  width: 550px;
+}
+
+.header h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 25px;
+}
+
+.header p {
+  margin: 0;
+  margin-left: 25px;
+  font-size: 30px;
+}
+
+.header span {
+  font-size: 30px;
+}
+
+/* Navbar */
+nav {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+nav ul {
+  margin-left: auto;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active {
+  font-size: 21px;
+}
+
+.active::before {
+  content: "<";
+}
+
+.active::after {
+  content: " />";
+}
+
+nav li a {
+  color: black;
+}
+
+/* Home */
+/* Presentation */
+.presentation {
+  color: white;
+  background-color: #222;
+  border-radius: 40px 40px 0 0;
+  padding-left: 100px;
+}
+
+.doctype {
+  padding-top: 100px;
+}
+
+.head-tag {
+  margin-left: 50px;
+}
+
+.title-tag {
+  margin-left: 100px;
+  font-size: 2em;
+}
+
+.body-tag {
+  margin-left: 50px;
+}
+
+.p-tag {
+  margin-left: 100px;
+  font-size: 2em;
+}
+
+.p-text {
+  margin-left: 150px;
+  font-size: 2em;
+  width: 50%;
+}
+
+.p-text a {
+  color: white;
+  text-decoration: underline;
+}
+
+.p-text a:active {
+  color: black;
+}
+
+.html-end {
+  padding-bottom: 100px;
+}
+
+/* Work */
+.work {
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work h2 {
+  margin: 40px 0;
+  font-size: 40px;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 300px;
+  padding: 0;
+  margin: 10px;
+  box-shadow: 0 0 15px 5px #ccc;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 15px #ccc;
+}
+
+.img-card {
+  min-width: 300px;
+  max-width: 300px;
+  height: 500px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%;
+}
+
+.card p {
+  margin: 10px 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.github {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* About */
+.about {
+  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  color: white;
+  background-color: #222;
+  border-radius: 40px 40px 0 0;
+}
+
+.portrait {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.portrait img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about-text {
+  padding-left: 100px;
+}
+
+.about span {
+  font-size: 2em;
+}
+
+.about p {
+  font-size: 1.8em;
+  margin: 15px 150px 15px 50px;
+}
+
+.about a {
+  color: white;
+  text-decoration: underline;
+}
+
+.about a:active {
+  color: black;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.skills h2 {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.skills > div {
+  display: flex;
+}
+
+.skills > div > div {
+  display: flex;
+}
+
+.skills > div > div > div {
+  width: 310px;
+  height: 310px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 4px #afafaf;
+}
+
+.skills p {
+  margin: 10px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.skill-icon {
+  font-size: 15em;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML */
+.html .skill-icon {
+  color: #f16528;
+}
+
+.html {
+  position: relative;
+  transition: background 1s;
+}
+
+.html:hover {
+  background: #222;
+}
+
+.html::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.html:hover::after {
+  content: "";
+  background: #222 url("../images/html.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.html .skill-icon, .html p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.html:hover .skill-icon, .html:hover p {
+  opacity: 0;
+}
+
+/* CSS */
+.css .skill-icon {
+  color: #2a65f1;
+}
+
+.css {
+  position: relative;
+  transition: background 1s;
+}
+
+.css:hover {
+  background: #222;
+}
+
+.css::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.css:hover::after {
+  content: "";
+  background: #222 url("../images/css.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.css .skill-icon, .css p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.css:hover .skill-icon, .css:hover p {
+  opacity: 0;
+}
+
+/* JS */
+.js .skill-icon {
+  color: #f7df1d;
+}
+
+.js {
+  position: relative;
+  transition: background 1s;
+}
+
+.js:hover {
+  background: #222;
+}
+
+.js::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.js:hover::after {
+  content: "";
+  background: #222 url("../images/js.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.js .skill-icon, .js p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.js:hover .skill-icon, .js:hover p {
+  opacity: 0;
+}
+
+/* React */
+.react .skill-icon {
+  color: #00d8ff;
+}
+
+.react {
+  position: relative;
+  transition: background 1s;
+}
+
+.react:hover {
+  background: #222;
+}
+
+.react::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.react:hover::after {
+  content: "";
+  background: #222 url("../images/react.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.react .skill-icon, .react p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.react:hover .skill-icon, .react:hover p {
+  opacity: 0;
+}
+
+/* SASS */
+.sass .skill-icon {
+  color: #cd6799;
+}
+
+.sass {
+  position: relative;
+  transition: background 1s;
+}
+
+.sass:hover {
+  background: #222;
+}
+
+.sass::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.sass:hover::after {
+  content: "";
+  background: #222 url("../images/sass.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.sass .skill-icon, .sass p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.sass:hover .skill-icon, .sass:hover p {
+  opacity: 0;
+}
+
+/* Bootstrap */
+.bootstrap .skill-icon {
+  color: #563e7c;
+}
+
+.bootstrap {
+  position: relative;
+  transition: background 1s;
+}
+
+.bootstrap:hover {
+  background: #222;
+}
+
+.bootstrap::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.bootstrap:hover::after {
+  content: "";
+  background: #222 url("../images/bootstrap.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bootstrap .skill-icon, .bootstrap p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.bootstrap:hover .skill-icon, .bootstrap:hover p {
+  opacity: 0;
+}
+
+/* Git */
+.git .skill-icon {
+  color: #f05134;
+}
+
+.git {
+  position: relative;
+  transition: background 1s;
+}
+
+.git:hover {
+  background: #222;
+}
+
+.git::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.git:hover::after {
+  content: "";
+  background: #222 url("../images/git.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.git .skill-icon, .git p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.git:hover .skill-icon, .git:hover p {
+  opacity: 0;
+}
+
+/* Responsive */
+.responsive {
+  position: relative;
+  transition: background 1s;
+}
+
+.responsive:hover {
+  background: #222;
+}
+
+.responsive::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.responsive:hover::after {
+  content: "";
+  background: #222 url("../images/responsive.png") 0 0 no-repeat;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.responsive .skill-icon, .responsive p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.responsive:hover .skill-icon, .responsive:hover p {
+  opacity: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  height: 300px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer div {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+footer p {
+  color: white;
+  text-align: center;
+}
+footer p span:first-of-type {
+  padding-left: 15px;
+}
+.footer-icon {
+  color: white;
+}
+
+.footer-link-icon {
+  color: white;
+  filter: drop-shadow(0 0 10px white);
+}/*# sourceMappingURL=App.css.map */

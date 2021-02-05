@@ -18,7 +18,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header'
 
 // Styles
-import './App.css';
+import './styles/App.css';
 
 /* Imports END */
 

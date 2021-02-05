@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import portrait from '../images/portrait.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -71,6 +72,8 @@ function About() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </>
     )
 }

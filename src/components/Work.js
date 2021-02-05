@@ -14,20 +14,31 @@ function Work() {
                         <div className="img-card">
                             <img src={arkaden} alt="" />
                         </div>
-                        <p>Arkaden</p>
                     </a>
+                    <p>Arkaden</p>
+
+                    <a href="https://github.com/alexanderys/individual-project-1" target="_blank"><p className="github">Link to Github</p></a>
+
                 </div>
                 <div className="card">
-                    <div className="img-card">
-                        <img src={quire} alt="" />
-                    </div>
+                    <a href="https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/intro.html">
+                        <div className="img-card">
+                            <img src={quire} alt="" />
+                        </div>
+                    </a>
                     <p>Quire notebook</p>
+
+                    <a href="https://github.com/Viktor-Hultman/quire_notebook_assignment_paperclip" target="_blank"><p className="github">Link to Github</p></a>
                 </div>
                 <div className="card">
-                    <div className="img-card">
-                        <img src={nasaapi} alt="" />
-                    </div>
+                    <a href="#">
+                        <div className="img-card">
+                            <img src={nasaapi} alt="" />
+                        </div>
+                    </a>
+
                     <p>NASA Api playground</p>
+                    <a href="https://github.com/alexanderys/nasa-apis" target="_blank"><p className="github">Link to Github</p></a>
                 </div>
             </div>
         </div>
