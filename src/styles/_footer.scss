@@ -3,15 +3,16 @@ footer {
     background-color: $vscode-color;
     height: 300px;
     border-radius: 40px 40px 0 0;
-
+    @include flexbox-base(column, center, space-evenly);
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     div {
-        display: flex;
+        @include flexbox-base(row, normal, space-around);
+        /* display: flex;
+        justify-content: space-around; */
         width: 20%;
-        justify-content: space-around;
     }
      a {
         text-decoration: none;
@@ -36,7 +37,7 @@ footer {
 
 .footer-link-icon {
     color: white;
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 7px white);
 }
 
 .footer-react-icon {

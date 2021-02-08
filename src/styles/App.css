@@ -31,7 +31,11 @@ ul {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: normal;
   justify-content: center;
+  /*   display: flex;
+    flex-direction: column;
+    justify-content: center; */
   filter: grayscale(100%);
 }
 
@@ -79,7 +83,11 @@ ul {
 nav {
   padding: 10px 50px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: normal;
+  /* display: flex;
+  align-items: center; */
   border-bottom: 2px solid black;
 }
 
@@ -169,6 +177,10 @@ nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: normal;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 .work a {
@@ -184,8 +196,12 @@ nav li a {
 .card-container {
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-evenly; */
   margin: 20px 0;
 }
 
@@ -275,6 +291,10 @@ nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: normal;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
   margin-bottom: 200px;
 }
 
@@ -286,9 +306,17 @@ nav li a {
 
 .skills > div {
   display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: normal;
+  /* display: flex; */
 }
 
 .skills > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: normal;
   display: flex;
 }
 
@@ -299,8 +327,12 @@ nav li a {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center center;
+  justify-content: normal;
+  /* display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  */
   box-sizing: border-box;
   box-shadow: 0 0 20px 4px #afafaf;
 }
@@ -659,11 +691,19 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  display: flex;
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; */
 }
 footer div {
   display: flex;
-  width: 20%;
+  flex-direction: row;
+  align-items: normal;
   justify-content: space-around;
+  /* display: flex;
+  justify-content: space-around; */
+  width: 20%;
 }
 footer a {
   text-decoration: none;
@@ -682,5 +722,5 @@ footer p span:first-of-type {
 
 .footer-link-icon {
   color: white;
-  filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 7px white);
 }/*# sourceMappingURL=App.css.map */

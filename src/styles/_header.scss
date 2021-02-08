@@ -5,9 +5,10 @@
 
 .header-background {
   height: 100%;
-  display: flex;
+  @include flexbox-base(column, normal, center);
+/*   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   filter: grayscale(100%);
 }
 
@@ -54,8 +55,9 @@
 /* Navbar */
 nav {
   padding: 10px 50px;
-  display: flex;
-  align-items: center;
+  @include flexbox-base(row, center);
+  /* display: flex;
+  align-items: center; */
   border-bottom: 2px solid black;
 }
 

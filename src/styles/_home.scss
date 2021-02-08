@@ -54,9 +54,10 @@
   margin: 0;
   margin-top: 50px;
   margin-bottom: 150px;
-  display: flex;
+  @include flexbox-base(column, center);
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 .work a {
@@ -71,9 +72,10 @@
 
 .card-container {
   width: 100%;
-  display: flex;
+  @include flexbox-base(row, center, space-evenly);
+  /* display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   margin: 20px 0;
 }
 
