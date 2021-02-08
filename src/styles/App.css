@@ -317,7 +317,7 @@ nav li a {
   flex-direction: row;
   align-items: normal;
   justify-content: normal;
-  display: flex;
+  /* display: flex; */
 }
 
 .skills > div > div > div {
@@ -327,8 +327,8 @@ nav li a {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center center;
-  justify-content: normal;
+  align-items: center;
+  justify-content: center;
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -682,6 +682,74 @@ nav li a {
   opacity: 0;
 }
 
+/* Contact */
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.form form {
+  width: 40%;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 50px;
+}
+.form form > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: normal;
+  width: 100%;
+}
+.form label {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+.form label:first-of-type {
+  margin-right: 10px;
+}
+.form label:nth-of-type(2) {
+  margin-left: 10px;
+}
+.form input {
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  font-family: inherit;
+  margin: 10px 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.form textarea {
+  display: block;
+  font-size: 1.5rem;
+  font-family: inherit;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.form button {
+  display: block;
+  font-size: 1.5rem;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 66px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
 /* Footer */
 footer {
   background-color: #222;
@@ -695,6 +763,7 @@ footer {
   /* flex-direction: column;
   align-items: center;
   justify-content: space-evenly; */
+  box-shadow: 0 0 10px 0px #222;
 }
 footer div {
   display: flex;

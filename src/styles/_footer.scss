@@ -8,6 +8,7 @@ footer {
     /* flex-direction: column;
     align-items: center;
     justify-content: space-evenly; */
+    box-shadow: 0 0 10px 0px $vscode-color;
     div {
         @include flexbox-base(row, normal, space-around);
         /* display: flex;

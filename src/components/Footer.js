@@ -22,7 +22,7 @@ function Footer() {
             </div>
             <p>
                 <FontAwesomeIcon icon={faReact} className="footer-react-icon" />
-                <span>Created with React</span><br /><span>&copy;2021 aYs</span>
+                <span>Created with React</span><br /><span>&copy; 2021 aYs</span>
             </p>
         </footer>
     );

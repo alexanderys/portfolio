@@ -21,7 +21,7 @@ function Work() {
 
                 </div>
                 <div className="card">
-                    <a href="https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/intro.html">
+                    <a href="https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/intro.html" target="_blank">
                         <div className="img-card">
                             <img src={quire} alt="" />
                         </div>
