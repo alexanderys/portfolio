@@ -24,7 +24,7 @@ import './styles/App.css';
 
 const headerContent = {
   home: ["Welcome to my portfolio site", "I'm Alex, a soon-to-be front-end developer."],
-  about: ['About me', 'Info about me and my acquired skills so far during my coding journey.'],
+  about: ['About me', 'A little bit about myself and my acquired skills so far during my coding journey.'],
   contact: ['Contact', 'Feel free to get in touch.']
 }
 
