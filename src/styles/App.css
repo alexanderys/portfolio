@@ -39,7 +39,7 @@ ul {
   filter: grayscale(100%);
 }
 
-.header-background > div::after {
+.header-background::after {
   content: "";
   background: url("../images/header2.png");
   opacity: 0.2;
@@ -246,6 +246,7 @@ nav li a {
 }
 
 /* About */
+/* About me */
 .about {
   padding: 0;
   padding-top: 100px;
@@ -287,6 +288,7 @@ nav li a {
   color: black;
 }
 
+/* Skills */
 .skills {
   display: flex;
   flex-direction: column;
@@ -725,6 +727,7 @@ nav li a {
   margin: 10px 0;
   padding: 10px 15px;
   box-sizing: border-box;
+  border: none;
   border-radius: 5px;
   background-color: #222;
   color: white;
@@ -737,6 +740,7 @@ nav li a {
   margin: 10px 0;
   padding: 10px 15px;
   box-sizing: border-box;
+  border: none;
   border-radius: 5px;
   background-color: #222;
   color: white;
@@ -765,6 +769,33 @@ nav li a {
 
 .focus3 {
   box-shadow: 0 0 15px 0 #222;
+}
+
+.form .disabled {
+  /* color: rgba(189, 23, 23, 0.521); */
+  background: rgba(224, 20, 20, 0.623);
+  overflow: hidden;
+  z-index: 2;
+  cursor: auto;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  background-color: #14e025;
+  border: none;
+  border-radius: 10px;
+  line-height: 2rem;
+  box-sizing: border-box;
 }
 
 /* Footer */

@@ -22,17 +22,17 @@ function Header(props) {
     }
 
     return (
-        <div className="header">
+        <header className="header">
             <Navbar />
-            <div className="header-background">
+            <section className="header-background">
                 <div>
                     <span>{codeOpen}</span>
                     <h1>{content[0]}</h1>
                     <p>{content[1]}</p>
                     <span>{codeClose}</span>
                 </div>
-            </div>
-        </div>
+            </section>
+        </header>
     );
 }
 

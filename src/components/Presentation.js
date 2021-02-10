@@ -14,7 +14,7 @@ const pEnd = '</p>';
 
 function Presentation() {
     return (
-        <div className="presentation">
+        <section className="presentation">
             {/* <FontAwesomeIcon icon={faCode} size="2x" className="home-icon" /> */}
             {/* <h2 className="code-open">{codeOpen}</h2> */}
             <p className="doctype">{doctype}</p>
@@ -31,7 +31,7 @@ function Presentation() {
             <p className="body-tag">{bodyEnd}</p>
             <p className="html-tag html-end">{htmlEnd}</p>
             {/* <h2 className="code-close">{codeClose}</h2> */}
-        </div>
+        </section>
     );
 }
 

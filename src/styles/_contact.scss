@@ -34,6 +34,7 @@
         margin: 10px 0;
         padding: 10px 15px;
         box-sizing: border-box;
+        border: none;
         border-radius: 5px;
         background-color: $vscode-color;
         color: white;
@@ -46,6 +47,7 @@
         margin: 10px 0;
         padding: 10px 15px;
         box-sizing: border-box;
+        border: none;
         border-radius: 5px;
         background-color: $vscode-color;
         color: white;
@@ -74,3 +76,31 @@
 .focus3 {
     box-shadow: 0 0 15px 0 $vscode-color;
 }
+
+.form .disabled {
+    /* color: rgba(189, 23, 23, 0.521); */
+    background: rgba(224, 20, 20, 0.623);
+    overflow: hidden;
+    z-index: 2;
+    cursor: auto;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(20, 224, 37);
+    border: none;
+    border-radius: 10px;
+    line-height: 2rem;
+    box-sizing: border-box;
+}
+
