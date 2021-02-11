@@ -23,7 +23,7 @@ function Header(props) {
 
     return (
         <header className="header">
-            <Navbar />
+            <Navbar temp={props.temp} />
             <section className="header-background">
                 <div>
                     <span>{codeOpen}</span>

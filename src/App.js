@@ -1,6 +1,6 @@
 /* IMPORTS */
 // React
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,20 +19,33 @@ import Header from './components/Header'
 // Styles
 import './styles/App.css';
 
+// Constants
+import { API_URL } from './data';
+
 /* Imports END */
 
 const headerContent = {
-  home: ["Welcome to my portfolio site", "I'm Alex, a soon-to-be front-end developer."],
+  home: ["Welcome to my portfolio site", "I'm Alex, a front-end developer student."],
   about: ['About me', 'A little bit about myself and my acquired skills so far during my coding journey.'],
   contact: ['Contact', 'Feel free to get in touch.']
 }
 
 function App() {
+  const [weather, setWeather] = useState('');
+
+  useEffect(() => {
+    console.log('useEffect ran');
+    console.log(API_URL);
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(data => setWeather(data.main.temp))
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
 
-      <Header content={headerContent} />
+      <Header content={headerContent} temp={weather} />
 
       <Switch>
         <Route path="/about">

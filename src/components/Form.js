@@ -15,87 +15,74 @@ function Form() {
         name: "",
         email: "",
         message: ""
-    })
+    });
 
     function handleValidationName(e) {
         console.log('Name validation ran');
         const name = e.target.name;
-        /* let formIsValid = true; */
 
-        // Name
         if (!inputs.name) {
             setErrors({
                 ...errors,
                 [name]: "Cannot be empty"
             });
-            return;
-        } else {
-            setErrors({
-                ...errors,
-                [name]: ""
-            });
-        }
-
-        if (typeof inputs.name !== "undefined") {
+        } else if (typeof inputs.name !== "undefined") {
             if (!inputs.name.match(/^[a-zA-Z]+$/)) {
-                /* formIsValid = false; */
                 setErrors({
                     ...errors,
                     [name]: "Only letters"
                 });
-                return;
             } else {
                 setErrors({
                     ...errors,
                     [name]: ""
                 });
             }
+        } else {
+            setErrors({
+                ...errors,
+                [name]: "",
+            });
         }
     }
 
     function handleValidationEmail(e) {
         console.log('Email validation ran');
         const name = e.target.name;
-        // Email
+
         if (!inputs.email) {
-            /* formIsValid = false; */
             setErrors({
                 ...errors,
                 [name]: "Cannot be empty"
             });
-            return;
-        } else {
-            setErrors({
-                ...errors,
-                [name]: ""
-            });
-        }
-
-        if (typeof inputs.email !== "undefined") {
+        } else if (typeof inputs.email !== "undefined") {
             let lastAtPos = inputs.email.lastIndexOf('@');
             let lastDotPos = inputs.email.lastIndexOf('.');
 
-            if (!(lastAtPos < lastDotPos && lastAtPos > 0 && inputs.email.indexOf('@@') == -1 && lastDotPos > 2 && (inputs.email.length - lastDotPos) > 2)) {
-                /* formIsValid = false; */
+            if (!(lastAtPos < lastDotPos && lastAtPos > 0 && inputs.email.indexOf('@@') == -1 && lastDotPos > 2 && (inputs.email.length - lastDotPos) >= 2)) {
                 setErrors({
                     ...errors,
                     [name]: "Email is not valid"
                 });
-                return;
             } else {
                 setErrors({
                     ...errors,
                     [name]: ""
                 });
             }
+        } else {
+            setErrors({
+                ...errors,
+                [name]: ""
+            });
         }
     }
 
     function handleValidationMessage(e) {
         console.log('Message validation ran');
         const name = e.target.name;
+
         if (!inputs.message) {
-            /* formIsValid = false; */
             setErrors({
                 ...errors,
                 [name]: "Cannot be empty"
@@ -106,20 +93,6 @@ function Form() {
                 [name]: ""
             });
         }
-    }
-
-    const [focus1, setFocus1] = useState(false);
-    const [focus2, setFocus2] = useState(false);
-    const [focus3, setFocus3] = useState(false);
-
-    function handleFocus1() {
-        setFocus1(!focus1);
-    }
-    function handleFocus2() {
-        setFocus2(!focus2);
-    }
-    function handleFocus3() {
-        setFocus3(!focus3);
     }
 
     function handleInputChange(e) {
@@ -161,49 +134,35 @@ function Form() {
                 <div>
                     <label htmlFor="name">Name
                         <input
-                            className={focus1 ? 'focus1' : ''}
                             id="name"
                             name="name"
                             type="text"
                             value={inputs.name}
                             onChange={handleInputChange}
-                            onFocus={handleFocus1}
-                            onBlur={e => {
-                                handleFocus1();
-                                handleValidationName(e);
-                            }} />
+                            onBlur={handleValidationName}
+                        />
                         <span style={{ color: "red" }}>{errors.name}</span>
                     </label>
                     <label htmlFor="email">Email
                         <input
-                            className={focus2 ? 'focus2' : ''}
                             id="email"
                             name="email"
                             type="email"
                             value={inputs.email}
                             onChange={handleInputChange}
-                            onFocus={handleFocus2}
-                            onBlur={e => {
-                                handleFocus2();
-                                handleValidationEmail(e);
-                            }}
+                            onBlur={handleValidationEmail}
                         />
                         <span style={{ color: "red" }}>{errors.email}</span>
                     </label>
                 </div>
                 <label htmlFor="message">Message
                     <textarea
-                        className={focus3 ? 'focus3' : ''}
                         id="message"
                         name="message"
                         rows="10"
                         value={inputs.message}
                         onChange={handleInputChange}
-                        onFocus={handleFocus3}
-                        onBlur={e => {
-                            handleFocus3();
-                            handleValidationMessage(e);
-                        }}
+                        onBlur={handleValidationMessage}
                     >
                     </textarea>
                     <span style={{ color: "red" }}>{errors.message}</span>
