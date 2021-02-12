@@ -4,8 +4,8 @@ footer {
     height: 300px;
     border-radius: 40px 40px 0 0;
     @include flexbox-base(column, center, space-evenly);
-    display: flex;
-    /* flex-direction: column;
+    /*display: flex;
+     flex-direction: column;
     align-items: center;
     justify-content: space-evenly; */
     box-shadow: 0 0 10px 0px $vscode-color;
@@ -22,6 +22,7 @@ footer {
     p {
         color: white;
         text-align: center;
+        margin: 0;
         
         span:first-of-type {
             padding-left: 15px;

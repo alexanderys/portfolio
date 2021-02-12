@@ -29,9 +29,10 @@
 }
 
 .p-text {
+  margin: 0;
   margin-left: 150px;
   font-size: 2em;
-  width: 50%;
+  width: 70%;
 }
 
 .p-text a {
@@ -80,13 +81,15 @@
 }
 
 .card {
-  min-width: 300px;
-  max-width: 300px;
+  /* min-width: 300px;
+  max-width: 300px; */
+  width: 300px;
   padding: 0;
   margin: 10px;
   box-shadow: 0 0 15px 5px #ccc;
   border-radius: 10px;
   text-align: center;
+  box-sizing: border-box;
 
   transition: transform 0.5s, box-shadow 0.5s;
 }
@@ -97,9 +100,10 @@
 }
 
 .img-card {
-  min-width: 300px;
-  max-width: 300px;
-  height: 500px;
+  /* min-width: 300px;
+  max-width: 300px; */
+  width: 100%;
+  max-height: 500px;
   box-sizing: border-box;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
