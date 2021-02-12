@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 Form Functionality Acquired thorugh:
 https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server
 */
+let submitReady = [false, false, false];
 
 function Form() {
     const [inputs, setInputs] = useState({
@@ -17,6 +18,17 @@ function Form() {
         message: ""
     });
 
+    const [submit, setSubmit] = useState(true);
+
+    function submitCheck() {
+        console.log(submitReady);
+        if (submitReady[0] && submitReady[1] && submitReady[2]) {
+            console.log('Ready');
+            setSubmit(false);
+            document.querySelector('button').classList.remove('disabled');
+        }
+    }
+
     function handleValidationName(e) {
         console.log('Name validation ran');
         const name = e.target.name;
@@ -26,23 +38,27 @@ function Form() {
                 ...errors,
                 [name]: "Cannot be empty"
             });
+            submitReady[0] = false;
         } else if (typeof inputs.name !== "undefined") {
             if (!inputs.name.match(/^[a-zA-Z]+$/)) {
                 setErrors({
                     ...errors,
                     [name]: "Only letters"
                 });
+                submitReady[0] = false;
             } else {
                 setErrors({
                     ...errors,
                     [name]: ""
                 });
+                submitReady[0] = true;
             }
         } else {
             setErrors({
                 ...errors,
                 [name]: "",
             });
+            submitReady[0] = true;
         }
     }
 
@@ -55,6 +71,7 @@ function Form() {
                 ...errors,
                 [name]: "Cannot be empty"
             });
+            submitReady[1] = false;
         } else if (typeof inputs.email !== "undefined") {
             let lastAtPos = inputs.email.lastIndexOf('@');
             let lastDotPos = inputs.email.lastIndexOf('.');
@@ -64,17 +81,20 @@ function Form() {
                     ...errors,
                     [name]: "Email is not valid"
                 });
+                submitReady[1] = false;
             } else {
                 setErrors({
                     ...errors,
                     [name]: ""
                 });
+                submitReady[1] = true;
             }
         } else {
             setErrors({
                 ...errors,
                 [name]: ""
             });
+            submitReady[1] = true;
         }
     }
 
@@ -87,11 +107,13 @@ function Form() {
                 ...errors,
                 [name]: "Cannot be empty"
             });
+            submitReady[2] = false;
         } else {
             setErrors({
                 ...errors,
                 [name]: ""
             });
+            submitReady[2] = true;
         }
     }
 
@@ -125,6 +147,9 @@ function Form() {
                 setInputs({ name: "", email: "", message: "" });
             }
             text.classList.remove('visible');
+            submitReady = [false, false, false];
+            setSubmit(true);
+            document.querySelector('button').classList.add('disabled');
         }, 5000);
     }
 
@@ -139,7 +164,10 @@ function Form() {
                             type="text"
                             value={inputs.name}
                             onChange={handleInputChange}
-                            onBlur={handleValidationName}
+                            onBlur={(e) => {
+                                handleValidationName(e);
+                                submitCheck();
+                            }}
                         />
                         <span style={{ color: "red" }}>{errors.name}</span>
                     </label>
@@ -150,7 +178,10 @@ function Form() {
                             type="email"
                             value={inputs.email}
                             onChange={handleInputChange}
-                            onBlur={handleValidationEmail}
+                            onBlur={(e) => {
+                                handleValidationEmail(e);
+                                submitCheck();
+                            }}
                         />
                         <span style={{ color: "red" }}>{errors.email}</span>
                     </label>
@@ -162,12 +193,15 @@ function Form() {
                         rows="10"
                         value={inputs.message}
                         onChange={handleInputChange}
-                        onBlur={handleValidationMessage}
+                        onBlur={(e) => {
+                            handleValidationMessage(e);
+                            submitCheck();
+                        }}
                     >
                     </textarea>
                     <span style={{ color: "red" }}>{errors.message}</span>
                 </label>
-                <button type="submit">Submit</button>
+                <button type="submit" className="disabled" disabled={submit}>Submit</button>
 
                 <p className="invisible">
                     Thanks for reaching out! I will get back to you soon.
