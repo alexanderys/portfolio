@@ -384,10 +384,12 @@
 
     /* Home */
     .presentation {
+        @include flexbox-base(column, flex-start, space-evenly);
+        height: 100vh;
         padding-left: 20px;
     }
     .presentation * {
-        font-size: 0.7em;
+        font-size: 1.0em;
     }
     .head-tag, .body-tag {
         margin-left: 20px;
@@ -424,17 +426,19 @@
 
         /* About */
     .about {
+        height: 100vh;
         padding-top: 40px;
-        padding-bottom: 60px
+        padding-bottom: 60px;
+        box-sizing: border-box;
     }
     .portrait {
-        width: 100px;
+        width: 150px;
     }
     .about-text {
         padding-left: 20px;
     }
     .about p {
-        font-size: 0.7em;
+        font-size: 1.0em;
         margin: 15px 40px 15px 20px;
     }
     .about span {
@@ -443,6 +447,7 @@
 
     /* Skills */
     .skills {
+        height: 100vh;
         margin-bottom: 50px;
     }
     .skills h2 {

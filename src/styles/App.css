@@ -1251,11 +1251,16 @@ footer p span:first-of-type {
 
   /* Home */
   .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100vh;
     padding-left: 20px;
   }
 
   .presentation * {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .head-tag, .body-tag {
@@ -1303,12 +1308,14 @@ footer p span:first-of-type {
 
   /* About */
   .about {
+    height: 100vh;
     padding-top: 40px;
     padding-bottom: 60px;
+    box-sizing: border-box;
   }
 
   .portrait {
-    width: 100px;
+    width: 150px;
   }
 
   .about-text {
@@ -1316,7 +1323,7 @@ footer p span:first-of-type {
   }
 
   .about p {
-    font-size: 0.7em;
+    font-size: 1em;
     margin: 15px 40px 15px 20px;
   }
 
@@ -1326,6 +1333,7 @@ footer p span:first-of-type {
 
   /* Skills */
   .skills {
+    height: 100vh;
     margin-bottom: 50px;
   }
 

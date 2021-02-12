@@ -31,7 +31,7 @@ function Work() {
                     <a href="https://github.com/Viktor-Hultman/quire_notebook_assignment_paperclip" target="_blank"><p className="github">Link to Github</p></a>
                 </div>
                 <div className="card">
-                    <a href="#">
+                    <a href="https://nasa-api-playground.surge.sh" target="_blank">
                         <div className="img-card">
                             <img src={nasaapi} alt="screenshot from my website where i implement some of NASA's open APIs" />
                         </div>
