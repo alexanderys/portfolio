@@ -32,14 +32,47 @@
         font-size: 35px;
     }
 
+    /* About */
+    .about {
+        padding-top: 50px;
+        padding-bottom: 70px
+    }
+    .portrait {
+        width: 200px;
+    }
+    .about p {
+        font-size: 1.4em;
+    }
+    .about span {
+        font-size: 1.6em;
+    }
+
+    /* Skills */
+    .skills {
+        margin-bottom: 100px;
+    }
+    .skills h2 {
+        margin-top: 60px;
+    }
+    .skills > div > div > div {
+        width: 250px;
+        height: 250px;
+    }
+    .skill-icon {
+        font-size: 12em;
+    }
+    .skills p {
+        font-size: 20px;
+    }
+    .html:hover::after, .css:hover::after, .js:hover::after, .react:hover::after, .sass:hover::after, .bootstrap:hover::after, .git:hover::after, .responsive:hover::after {
+        background-size: contain;
+    }
+
     /* Footer */
     footer {
         height: 250px;
     }
 }
-
-
-
 
 
 @media (max-width: 1200px) {
@@ -70,6 +103,44 @@
     }
     .card {
         width: 250px;
+    }
+
+    /* About */
+    .about {
+        padding-top: 40px;
+        padding-bottom: 60px
+    }
+    .portrait {
+        width: 150px;
+    }
+    .about p {
+        font-size: 1.1em;
+    }
+    .about span {
+        font-size: 1.3em;
+    }
+
+    /* Skills */
+    .skills {
+        margin-bottom: 70px;
+    }
+    .skills h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .skills h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .skills > div > div > div {
+        width: 200px;
+        height: 200px;
+    }
+    .skill-icon {
+        font-size: 8em;
+    }
+    .skills p {
+        font-size: 20px;
     }
 
     /* Footer */
@@ -106,13 +177,13 @@
         font-size: 18px;
     }
     nav li {
-        font-size: 15px;
+        font-size: 18px;
         margin-left: 30px;
         font-weight: 500;
     }
 
     .active {
-        font-size: 16px;
+        font-size: 19px;
         font-weight: 500;
     }
 
@@ -127,6 +198,49 @@
     }
     .card {
         width: 200px;
+    }
+    .img-card {
+        max-height: 400px;
+    }
+
+    /* About */
+    .about {
+        padding-top: 40px;
+        padding-bottom: 60px
+    }
+    .portrait {
+        width: 120px;
+    }
+    .about-text {
+        padding-left: 50px;
+    }
+    .about p {
+        font-size: 0.9em;
+        margin: 15px 100px 15px 50px;
+    }
+    .about span {
+        font-size: 1.1em;
+    }
+
+    /* Skills */
+    .skills > div {
+        @include flexbox-base(column);
+    }
+
+    /* Contact */
+    .form {
+        form {
+            width: 60%
+        }
+        label {
+            font-size: 1.0em;
+        }
+        input {
+            font-size: 1.1em;
+        }
+        textarea {
+            font-size: 1.1em;
+        }
     }
 
     /* Footer */
@@ -164,13 +278,13 @@
         font-size: 16px;
     }
     nav li {
-        font-size: 13px;
+        font-size: 16px;
         margin-left: 20px;
         font-weight: 500;
     }
 
     .active {
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 500;
     }
 
@@ -209,6 +323,9 @@
         font-size: 12px;
         font-weight: 500;
     }
+    .img-card {
+        max-height: 350px;
+    }
 
     /* Footer */
     footer {
@@ -234,5 +351,160 @@
 }
 
 @media (max-width: 576px) {
-    
+    /* Header */
+    .header h1 {
+        font-size: 20px;
+    }
+    .header p, .header span {
+        font-size: 15px;
+    }
+    nav {
+        margin: 0;
+        padding: 0px 10px;
+    }
+    .nav-icon {
+        font-size: 20px;
+    }
+    .header nav p {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+    }
+    nav li {
+        font-size: 12px;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    .active {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* Home */
+    .presentation {
+        padding-left: 20px;
+    }
+    .presentation * {
+        font-size: 0.7em;
+    }
+    .head-tag, .body-tag {
+        margin-left: 20px;
+    }
+    .title-tag, .p-tag {
+        margin-left: 40px;
+    }
+    .p-text {
+        margin-left: 60px;
+    }
+
+    .work {
+        margin-bottom: 20px;
+    }
+    .work h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 0; 
+    }
+    .card-container {
+        @include flexbox-base(column, center, center);
+    }
+    .card {
+        width: 200px;
+    }
+    .card p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .img-card {
+        max-height: 280px;
+    }
+
+        /* About */
+    .about {
+        padding-top: 40px;
+        padding-bottom: 60px
+    }
+    .portrait {
+        width: 100px;
+    }
+    .about-text {
+        padding-left: 20px;
+    }
+    .about p {
+        font-size: 0.7em;
+        margin: 15px 40px 15px 20px;
+    }
+    .about span {
+        font-size: 0.9em;
+    }
+
+    /* Skills */
+    .skills {
+        margin-bottom: 50px;
+    }
+    .skills h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .skills > div > div > div {
+        width: 120px;
+        height: 120px;
+    }
+    .skill-icon {
+        font-size: 4em;
+    }
+    .skills p {
+        font-size: 12px;
+    }
+
+        /* Contact */
+    .form {
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+        form {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 0.9em;
+        }
+        input {
+            font-size: 1.0em;
+        }
+        textarea {
+            font-size: 1.0em;
+        }
+        button {
+            font-size: 1.2em;
+            width: 150px;
+        }
+    }
+
+    /* Footer */
+    footer {
+        height: 130px;
+       
+
+        div {
+            @include flexbox-base(row, normal, space-between);
+        }
+        & > * {
+            padding: 5px 0;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
+    .footer-icon {
+        font-size: 1.7em;
+    }
+    .footer-link-icon {
+        font-size: 1.1em;
+    }
 }

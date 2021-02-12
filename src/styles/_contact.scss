@@ -61,14 +61,13 @@
         padding: 10px 0px;
         border: none;
         border-radius: 66px;
-        background-color: $vscode-color;
+        background-color: rgb(34, 209, 34);
         color: white;
         cursor: pointer;
     }
 }
 
 .form .disabled {
-    /* color: rgba(189, 23, 23, 0.521); */
     background: rgba(224, 20, 20, 0.623);
     overflow: hidden;
     z-index: 2;

@@ -56,9 +56,6 @@
   margin-top: 50px;
   margin-bottom: 150px;
   @include flexbox-base(column, center);
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 .work a {
@@ -74,15 +71,10 @@
 .card-container {
   width: 100%;
   @include flexbox-base(row, center, space-evenly);
-  /* display: flex;
-  align-items: center;
-  justify-content: space-evenly; */
   margin: 20px 0;
 }
 
 .card {
-  /* min-width: 300px;
-  max-width: 300px; */
   width: 300px;
   padding: 0;
   margin: 10px;
@@ -100,8 +92,6 @@
 }
 
 .img-card {
-  /* min-width: 300px;
-  max-width: 300px; */
   width: 100%;
   max-height: 500px;
   box-sizing: border-box;
