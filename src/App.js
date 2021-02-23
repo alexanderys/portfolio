@@ -1,6 +1,6 @@
 /* IMPORTS */
 // React
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,9 +19,6 @@ import Header from './components/Header'
 // Styles
 import './styles/App.css';
 
-// Constants
-import { API_URL } from './data';
-
 /* Imports END */
 
 const headerContent = {
@@ -31,21 +28,12 @@ const headerContent = {
 }
 
 function App() {
-  const [weather, setWeather] = useState('');
-
-  useEffect(() => {
-    console.log('useEffect ran');
-    console.log(API_URL);
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => setWeather(data.main.temp))
-  }, []);
 
   return (
     <Router>
       <ScrollToTop />
 
-      <Header content={headerContent} temp={weather} />
+      <Header content={headerContent} />
 
       <Switch>
         <Route path="/about">
