@@ -51,13 +51,13 @@
 /* Navbar */
 nav {
   padding: 10px 50px;
-  @include flexbox-base(row, center);
+  @include flexbox-base(row, center, space-between);
   border-bottom: 3px solid black;
 }
 
-nav ul {
+/* nav ul {
   margin-left: auto;
-}
+} */
 
 nav li {
   display: inline-block;
@@ -81,3 +81,20 @@ nav li a {
   color: black;
 }
 
+/* Dropdown */
+
+.dropdown {
+  display: none;
+  margin: 0;
+  border-bottom: 3px solid black;
+  padding: 10px;
+  li {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
+
+.dropbtn {
+  display: none;
+}

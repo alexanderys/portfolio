@@ -360,10 +360,10 @@
     }
     nav {
         margin: 0;
-        padding: 0px 10px;
+        padding: 20px 10px;
     }
     .nav-icon {
-        font-size: 20px;
+        font-size: 35px;
     }
     .header nav p {
         font-size: 12px;
@@ -381,6 +381,17 @@
         font-size: 13px;
         font-weight: 500;
     }
+
+    /* Dropdown */
+    .dropdown-content {
+        display: none;
+    }
+    .dropbtn {
+        display: inline-block;
+        background-color: white;
+        border: none;
+    }
+
 
     /* Home */
     .presentation {
